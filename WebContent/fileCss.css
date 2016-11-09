@@ -1,0 +1,253 @@
+#top{
+	width: 100%;
+	min-height: 30px;
+	border-bottom-color: #ff9e3f;	
+	background: black;
+	margin-bottom: 0px;
+}
+#q{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 20px;
+}
+#login{
+	height: 300px;
+	width: 500px;
+	margin: 0px auto;
+	margin-top: 120px;
+}
+div{
+	display: block;
+}
+#motherTable{
+	position: relative;
+	height: 618px;
+	width: 1326px;
+	margin:auto;
+}
+#cnTable{
+	position: relative;
+	width: 200px;
+	top:20px;
+}
+#detailcnTable{
+	width: 100%;
+	position: absolute;
+	background-color: white;
+	border-radius: 5px;
+}
+.buttoncn{
+	width: 100%;
+	border: 1px solid black;
+}
+.buttoncn a{
+	color:black;
+}
+#groupbuttoncn{
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;	
+}
+#dtTable{
+	height: 584px;
+	border: 1px solid #ddd; 
+	margin: 20px 0px 0px 250px;
+	position: absolute;
+	background-color: white;
+	border-radius: 5px;
+}
+#infoMonth{
+	border-bottom:1px solid #ddd;
+	height: 40px;
+	width: 100%;
+}
+body{
+	display: block;
+	width: 1346px;
+	background: url("http://koga-fansub.net/background/top.png");
+}
+#selectmonth{
+	width:250px;
+	position:absolute;
+	left:800px;
+	margin-top:2.5px;
+}
+.slm{
+	width: 100px;
+}
+#detailday{
+	width: 100%;
+	height: 520px;
+}
+.nameDate{
+	width: 100%;
+	table-layout: fixed;
+}
+#dt-a{
+	width: 100%;
+	height: 520px;
+	position: absolute;
+}
+.ifdayname{
+	border-right:  1px solid #ddd;
+}
+.monthRow{
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+}
+.dtevent{
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+.qwe{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+}
+.btninfo{
+	border: 1px solid #ddd;
+	margin:2.5px;
+}
+#colce{
+	width: 547px;
+	/*height: 533px;*/
+
+}
+.btninfo{
+	border: 1px solid #ddd;
+}
+.dk33{
+	border: 1px solid #ddd;
+	font-size: large;
+	text-align: left;
+	height: 530px;
+	padding: 10px;
+}
+#db{
+	width: 100%;
+	background-color: white;
+	height: 50px;
+}
+.lb{
+	margin-top:20px;
+}
+.haftcol{
+	width: 50%;
+	height: 100%;
+	border-right:  1px solid #ddd;
+}
+.fullrow{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ddd;
+}
+#colc{
+	/*width: 547px;*/
+	height: 532px;
+}
+.avt{
+	height: 160px;
+	width: 160px;
+	margin-top: 15px;
+}
+.boxnoty{
+	width: 100%;
+}
+.Reminder{
+	margin-top: 10px;
+}
+.spacebot{
+	margin-bottom:20px;
+}
+#RpWeek{
+	position: absolute;
+}
+#RpDay{
+	position: absolute;
+}
+.findEv{
+	border: 1px solid black;
+	padding: 5px 5px -5px 5px;
+	margin: 10px 0px 0px 0px;
+	border-radius: 10px;
+	width: 100%;
+}
+.findEvdn{
+	border: 1px solid black;
+	border-radius:  10px;
+	padding: 13px 0px 13px 13px;
+	margin: 10px 0px 0px 0px;
+	width: 95%;
+}
+.finds{
+	border: 1px solid black;
+	border-radius:  10px;
+	padding: 12px 0px 12px 0px;
+	margin: 10px 0px 0px 0px;
+	width: 10%;
+}
+tbody{
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th{
+	background: silver;
+    color: black;
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 1px;
+}
+table th{
+    border: 1px solid black;
+    padding: 3px 10px;
+    word-wrap: break-word;
+}
+table td{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+    padding: 3px 10px;
+    word-wrap: break-word;
+}
+#search{
+	width: 100%;
+	padding-top: 20px;
+	height: 100px;
+}
+#tableDS{
+	width: 100%;
+	padding: 10px;
+}
+.col-md-6{
+	width: 100%;
+}
+#thang , #nam{
+	font-size: 20px;
+}
+div	div	table tr td{
+	border: none;
+	padding-left: 0px;
+	
+}
+#bot{
+	width: 100%;
+	border-top:1px solid #ff9e3f;	
+	height: auto;
+}
+#bot span{
+	margin-top:2px;
+	color: white;
+}
