@@ -39,11 +39,7 @@
 	    <input type="password" class="login-password" required="true" placeholder="Password" name="password" />
 	    <label class="labelcheckbox"><input type="checkbox" />Remember Me</label>
 	    <input type="submit" value="Login" class="login-submit"/>
-	    <p style="color:red;">
-			<c:if test="${not empty param.errMsg}">
-	        	<c:out value="${param.errMsg}" />
-	        </c:if>
-		</p>
+	    
   	</form>
   
 </div>

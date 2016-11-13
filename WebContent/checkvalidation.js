@@ -13,9 +13,8 @@ $(document).ready(function() {
             Email: {
             	required: true,
                 email: true
-               
             },
-            Phone: "required"
+            Phone: "required",
         },
         messages: {
             Name: "Please enter your Name",
@@ -30,10 +29,10 @@ $(document).ready(function() {
             Email: {
                 Email: "Please enter a valid email address",
             },
-            Phone: "Please enter your Phone"
+            Phone: "Please enter your Phone",
         },
         submitHandler: function(form) {
-            window.location = "Home Page.jsp";
+            form.submit();
         }
     });
 })

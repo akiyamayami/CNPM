@@ -1,7 +1,7 @@
 package XL;
 
 import java.sql.*;
-
+import java.sql.Statement;
 public class Conectdatabase {
 	
 	private Connection conn = null;
@@ -12,7 +12,7 @@ public class Conectdatabase {
 	private String password = "1900561558";
 	private Statement st = null;
 	private ResultSet rs = null;
-	public boolean ExecuteUpdateSQL(String strQuery)
+	public boolean ExecuteQuerySQL(String strQuery)
 	{
 		try{
 			Class.forName(driver).newInstance();
@@ -20,14 +20,28 @@ public class Conectdatabase {
 			st = conn.createStatement();
 			rs = st.executeQuery(strQuery);
 			conn.close();
+			return true;
 		}
 		catch (Exception e) {
 			// TODO: handle exception
 			return false;
 		}
-		return true;
 	}
-	
+	public boolean ExecuteUpdateSQL(String strQuery)
+	{
+		try{
+			Class.forName(driver).newInstance();
+			conn = DriverManager.getConnection(url+dbName+"?useSSL=false",userName,password);
+			st = conn.createStatement();
+			st.executeUpdate(strQuery);
+			conn.close();
+			return true;
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
 	public ResultSet RS(String strQuery)
 	{
 		try{
@@ -35,14 +49,21 @@ public class Conectdatabase {
 			conn = DriverManager.getConnection(url+dbName+"?useSSL=false",userName,password);
 			st = conn.createStatement();
 			rs = st.executeQuery(strQuery);	
-			conn.close();
-			if(rs.next())
-				return rs;
-			else
-				return null;
+			return rs;
 		}
 		catch (Exception e) {
 			return null;
+		}
+	}
+	
+	public void Close()
+	{
+		try
+		{
+		conn.close();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
 		}
 	}
 }

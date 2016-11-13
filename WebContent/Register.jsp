@@ -28,7 +28,7 @@
   </div>
 </div>
 <div class="login">
-  <form id="register" name="formRs">
+  <form id="register" action="Register" method="post">
     <H2>Register</H2>
     <input type="text" class="login-username rg-in" autofocus="true" Name="Name" placeholder="Name" required="true" />
     <input type="text" class="login-username rg-in" autofocus="true" Name="ID" placeholder="ID"/>
@@ -37,7 +37,7 @@
     <input type="email" class="login-username rg-in" autofocus="true" Name="Email" placeholder="Email"/>
     <input type="text" class="login-username rg-in" autofocus="true" Name="Phone" placeholder="Phone"/>
     <input type="submit" value="Complete Registration" class="Register-submit login-submit"  />
+    <div style="color: #FF0000;">${Message}</div>
   </form>
 </div>
 </body>
-<!-- onclick="location.href='Home Page.html';" -->

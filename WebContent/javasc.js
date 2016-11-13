@@ -1,12 +1,5 @@
 $(document).ready(function() {
     
-    $('#submitbtn1').click(function() {
-        $('#loginModal').modal('show');
-    });
-    $('#btnHideModal').click(function() {
-      $('#loginModal').modal('hide');
-    	
-    });
     $('input[type="radio"]').click(function() {
         if ($(this).attr("value") == "Never") {
             $(".radio-After").prop("disabled", true);

@@ -45,121 +45,31 @@
         </div>
     </div>
     <div id="dtTable">
-        <form id="qweasdzxc">
+        <form id="qweasdzxc" action="ChangePass" method="post">
             <div class="fullrow">
                 <a href="#" class="btn btn-default" style="margin: 3px;" onclick="location.href='Cn Calendar 2.jsp';">Back</a>
                 <input type="submit" class="btn btn-default pull-right" style="margin: 3px;" id="submitbtn1" value="Save and exit" />
-                <!--id="btnShowModal"-->
             </div>
             <div class="mv-container">
-                <div class="col-sm-6">
-                    <div class="colleft  colcheck" style="border-right:  1px solid #ddd;">
-                        <h3 align="center">Infomation</h3>
-                        <div class="form-group">
-                            <label style="margin-top:20px;">Name</label>
-                            <input type="text" class="form-control has-error" required="true" id="nameip" />
-                        </div>
-                        <div class="form-group">
-                            <label style="margin-top:20px;">Phone</label>
-                            <input type="text" class="form-control" required="true" id="phoneip" />
-                        </div>
-                        <div class="form-group">
-                            <label style="margin-top:20px;">Email</label>
-                            <input type="Email" class="form-control" required="true" id="emailip" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="colright  colcheck">
-                        <h3 align="center">Password</h3>
-                        <div class="form-group">
-                            <label style="margin-top:20px;">New Password</label>
-                            <input type="password" class="form-control has-error" required id="pass1" minlength="6" id="passip">
-                        </div>
-                        <div class="form-group">
-                            <label style="margin-top:20px;">Comfirm New Password</label>
-                            <input type="password" class="form-control" required id="pass2" id="Cpassip">
-                        </div>
-                    </div>
-                </div>
+	            <div style="margin:10px;">
+		            <h3 align="center">Password</h3>
+		            <div class="form-group">
+			            <label style="margin-top:20px;">Old Password</label>
+			            <input type="password" class="form-control has-error" required="true" name="OPass" />
+		            </div>
+		            <div class="form-group">
+			            <label style="margin-top:20px;">New Password</label>
+			            <input type="password" class="form-control" required="true" name="NPass" />
+		            </div>
+		            <div class="form-group">
+			            <label style="margin-top:20px;">Comfirm New Password</label>
+			            <input type="password" class="form-control" required="true" name="CPNPass" />
+	            	</div>
+	            </div>
             </div>
         </form>
-        <div class="modal fade" data-keyboard="false" data-backdrop="static" id="loginModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h4 class="modal-title" align="center">Enter Old Password to Complete Change</h4>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password" id="inputPassword">
-                            </div>
-                        </form>
-                        <button class="btn btn-primary" type="submit" onclick="location.href='Cn Calendar 2.jsp';">Comfirm</button>
-                        <button class="btn btn-primary" id="btnHideModal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-  	<script type="text/javascript">
-  	var pass1 = document.getElementById('pass1');
-	var pass2 = document.getElementById('pass2');
-
-	var checkPasswordValidity = function() {
-	    if (pass1.value != pass2.value) {
-	        pass2.setCustomValidity('Passwords must match.');
-	    } else {
-	        pass2.setCustomValidity('');
-	    }        
-	};
-
-	pass1.addEventListener('change', checkPasswordValidity, false);
-	pass2.addEventListener('change', checkPasswordValidity, false);
-  	</script>
-  	<script>
-  		function validateText(id)
-  		{
-  			if($(id).val() == null || $(id).val() == "")
-  			{
-  				var div=$(id).closest("div");
-  				div.addClass("has-error");
-  				return false;
-  			}
-  			else
-  			{
-  				var div=$(id).closest("div");
-  				div.removeClass("has-error");
-  				div.addClass("has-feedback");
-  				div.append('<span class="glyphicon glyphicon-ok form-control-feedback" style="top:38px;"></span>');
-  				return true;
-  			}
-  		}
-  		$(document).ready(function(){
-  			$('#submitbtn1').click(function(){
-  				if(!validateText("#nameip"))
-  				{
-  					return false;			
-  				}
-  				if(!validateText("#phoneip"))
-  				{
-  					return false;			
-  				}
-  				if(!validateText("#emailip"))
-  				{
-  					return false;			
-  				}
-  				if(!validateText("#pass1"))
-  				{
-  					return false;			
-  				}
-  				if(!validateText("#pass2"))
-  				{
-  					return false;			
-  				}
-  			});
-  		});
-  	</script>
 </body>
 </html>
 <!-- 			        -->

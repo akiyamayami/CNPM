@@ -1,6 +1,8 @@
 package XL;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +31,41 @@ public class Register extends HttpServlet {
 		String Email = request.getParameter("Email");
 		String Phone = request.getParameter("Phone");
 		String Role;
+		String strQuery = "";
+		ResultSet rs = null;
+		try{
+			if(Name != "" && Name != null && ID != "" && ID != null && 
+				Password != "" && Password != null && Confirm_Password != "" && Confirm_Password != null && 
+				Email != "" && Email != null && Phone != "" && Phone != null)
+			{
+				strQuery = "select * from User where UserName = '"  + ID + "'";
+				rs = q.RS(strQuery);
+				if(rs.next())
+				{
+					response.sendRedirect("Register.jsp");
+					request.setAttribute("Message","Có lỗi Xảy ra vui lòng đăng ký lại");
+				}
+				else
+				{
+					strQuery = "insert into User values('"+ ID + "','" + Password + "','" +  Name + "','" + Email + "','" + Phone + "','2')"+";";
+					boolean check = q.ExecuteUpdateSQL(strQuery);
+					if(check)
+					{
+						response.sendRedirect("Home Page.jsp");
+						q.Close();
+					}
+					else
+					{
+						response.sendRedirect("Register.jsp");
+						
+						q.Close();
+					}
+				}
+			}
+			
+		}
+		catch (Exception e) {
+		}
 	}
 
 }
